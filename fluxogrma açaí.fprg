@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="SENAI"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-17 04:28:13 "/>
+        <attribute name="created" value="U0VOQUk7RFNOMzAxMTE5NjI4MjsyMDIyLTA0LTI2OyIwMzoyMjoxMSAiOzIyOTI="/>
+        <attribute name="edited" value="U0VOQUk7RFNOMzAxMTE5NjI4MjsyMDIyLTA1LTE3OyIwNDoyODoxMyAiOzk7MjQxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome" type="String" array="False" size=""/>
+            <declare name="tamanho, numcomplemento, complementos, complemento2, complemento3, valor" type="Real" array="False" size=""/>
+            <output expression="&quot;Ol&#225;! Bem vindo a nossa A&#231;aiteria! Informe sue nome:&quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;Os tamanhos disponiveis s&#227;o:&quot;" newline="True"/>
+            <output expression="&quot;200ml - R$ 5,00&quot;" newline="True"/>
+            <output expression="&quot;300ml - R$ 6,00&quot;" newline="True"/>
+            <output expression="&quot;500ml - R$ 8,00&quot;" newline="True"/>
+            <output expression="&quot;700ml - R$ 10,00&quot;" newline="True"/>
+            <output expression="&quot;Qual o tamanho do a&#231;a&#237; que voc&#234; gostaria? 1 para 200ml, 2 para 300ml, 3 para 500ml e 4 para 700ml&quot;" newline="True"/>
+            <input variable="tamanho"/>
+            <if expression="tamanho = 1">
+                <then>
+                    <output expression="&quot;A lista de complementos disponiveis em nossa A&#231;aiteria &#233; Leite em p&#243;, Leite condensado, Granola, Banana. Sendo cada complemento R$ 2,50&quot;" newline="True"/>
+                    <output expression="&quot;Quantos complementos voc&#234; vai querer? 1, 2, 3 ou 4&quot;" newline="True"/>
+                    <input variable="numcomplemento"/>
+                    <if expression="numcomplemento = 1">
+                        <then>
+                            <output expression="&quot;Qual complemento vc deseja? 1 para leite em p&#243;, 2 para leite condensado, 3 para granola, 4 para banana:&quot;" newline="True"/>
+                            <input variable="complementos"/>
+                            <output expression="nome" newline="False"/>
+                            <output expression="&quot; pegue o a&#231;a&#237; em nossa bancada assim que chamarmos o seu nome&quot;" newline="True"/>
+                            <output expression="&quot;O valor de sua compra foi R$: &quot;" newline="False"/>
+                            <assign variable="valor" expression="5.00 + 2.50"/>
+                            <output expression="valor" newline="True"/>
+                            <output expression="&quot;Agradecemos a prefer&#234;ncia!&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="numcomplemento=2">
+                                <then>
+                                    <output expression="&quot;Qual complemento vc deseja? 1 para leite em p&#243;, 2 para leite condensado, 3 para granola, 4 para banana:&quot;" newline="True"/>
+                                    <output expression="&quot;Digite o n&#250;emero do primeiro complememto:&quot;" newline="True"/>
+                                    <input variable="complementos"/>
+                                    <output expression="&quot;Digite o n&#250;emero do segundo complememto:&quot;" newline="True"/>
+                                    <input variable="complemento2"/>
+                                    <output expression="nome" newline="False"/>
+                                    <output expression="&quot; pegue o a&#231;a&#237; em nossa bancada assim que chamarmos o seu nome&quot;" newline="True"/>
+                                    <output expression="&quot;O valor de sua compra foi R$: &quot;" newline="False"/>
+                                    <assign variable="valor" expression="5.00 + 2.50 * 2"/>
+                                    <output expression="valor" newline="True"/>
+                                    <output expression="&quot;Agradecemos a prefer&#234;ncia!&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="numcomplemento=3">
+                                        <then>
+                                            <output expression="&quot;Qual complemento vc deseja? 1 para leite em p&#243;, 2 para leite condensado, 3 para granola, 4 para banana:&quot;" newline="True"/>
+                                            <output expression="&quot;Digite o n&#250;emero do primeiro complememto:&quot;" newline="True"/>
+                                            <input variable="complementos"/>
+                                            <output expression="&quot;Digite o n&#250;emero do segundo complememto:&quot;" newline="True"/>
+                                            <input variable="complemento2"/>
+                                            <output expression="&quot;Digite o n&#250;emero do terceiro complememto:&quot;" newline="True"/>
+                                            <input variable="complemento3"/>
+                                            <output expression="nome" newline="False"/>
+                                            <output expression="&quot; pegue o a&#231;a&#237; em nossa bancada assim que chamarmos o seu nome&quot;" newline="True"/>
+                                            <output expression="&quot;O valor de sua compra foi R$: &quot;" newline="False"/>
+                                            <assign variable="valor" expression="5.00 + 2.50 *3"/>
+                                            <output expression="valor" newline="True"/>
+                                            <output expression="&quot;Agradecemos a prefer&#234;ncia!&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Voc&#234; ter&#225; todos os complementos dispon&#243;veis&quot;" newline="True"/>
+                                            <output expression="nome" newline="False"/>
+                                            <output expression="&quot; pegue o a&#231;a&#237; em nossa bancada assim que chamarmos o seu nome&quot;" newline="True"/>
+                                            <output expression="&quot;O valor de sua compra foi R$: &quot;" newline="False"/>
+                                            <assign variable="valor" expression="5.00 + 2.50 * 4"/>
+                                            <output expression="valor" newline="True"/>
+                                            <output expression="&quot;Agradecemos a prefer&#234;ncia!&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="tamanho = 2">
+                        <then>
+                            <output expression="&quot;A lista de complementos disponiveis em nossa A&#231;aiteria &#233; Leite em p&#243;, Leite condensado, Granola, Banana. Sendo cada complemento R$ 2,50&quot;" newline="True"/>
+                            <output expression="&quot;Quantos complementos voc&#234; vai querer? 1, 2, 3 ou 4&quot;" newline="True"/>
+                            <input variable="numcomplemento"/>
+                            <if expression="numcomplemento = 1">
+                                <then>
+                                    <output expression="&quot;Qual complemento vc deseja? 1 para leite em p&#243;, 2 para leite condensado, 3 para granola, 4 para banana:&quot;" newline="True"/>
+                                    <input variable="complementos"/>
+                                    <output expression="nome" newline="False"/>
+                                    <output expression="&quot; pegue o a&#231;a&#237; em nossa bancada assim que chamarmos o seu nome&quot;" newline="True"/>
+                                    <output expression="&quot;O valor de sua compra foi R$: &quot;" newline="False"/>
+                                    <assign variable="valor" expression="6.00 + 2.50"/>
+                                    <output expression="valor" newline="True"/>
+                                    <output expression="&quot;Agradecemos a prefer&#234;ncia!&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="numcomplemento=2">
+                                        <then>
+                                            <output expression="&quot;Qual complemento vc deseja? 1 para leite em p&#243;, 2 para leite condensado, 3 para granola, 4 para banana:&quot;" newline="True"/>
+                                            <output expression="&quot;Digite o n&#250;emero do primeiro complememto:&quot;" newline="True"/>
+                                            <input variable="complementos"/>
+                                            <output expression="&quot;Digite o n&#250;emero do segundo complememto:&quot;" newline="True"/>
+                                            <input variable="complemento2"/>
+                                            <output expression="nome" newline="False"/>
+                                            <output expression="&quot; pegue o a&#231;a&#237; em nossa bancada assim que chamarmos o seu nome&quot;" newline="True"/>
+                                            <output expression="&quot;O valor de sua compra foi R$: &quot;" newline="False"/>
+                                            <assign variable="valor" expression="6.00 + 2.50 * 2"/>
+                                            <output expression="valor" newline="True"/>
+                                            <output expression="&quot;Agradecemos a prefer&#234;ncia!&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="numcomplemento=3">
+                                                <then>
+                                                    <output expression="&quot;Qual complemento vc deseja? 1 para leite em p&#243;, 2 para leite condensado, 3 para granola, 4 para banana:&quot;" newline="True"/>
+                                                    <output expression="&quot;Digite o n&#250;emero do primeiro complememto:&quot;" newline="True"/>
+                                                    <input variable="complementos"/>
+                                                    <output expression="&quot;Digite o n&#250;emero do segundo complememto:&quot;" newline="True"/>
+                                                    <input variable="complemento2"/>
+                                                    <output expression="&quot;Digite o n&#250;emero do terceiro complememto:&quot;" newline="True"/>
+                                                    <input variable="complemento3"/>
+                                                    <output expression="nome" newline="False"/>
+                                                    <output expression="&quot; pegue o a&#231;a&#237; em nossa bancada assim que chamarmos o seu nome&quot;" newline="True"/>
+                                                    <output expression="&quot;O valor de sua compra foi R$: &quot;" newline="False"/>
+                                                    <assign variable="valor" expression="6.00 + 2.50 *3"/>
+                                                    <output expression="valor" newline="True"/>
+                                                    <output expression="&quot;Agradecemos a prefer&#234;ncia!&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Voc&#234; ter&#225; todos os complementos dispon&#243;veis&quot;" newline="True"/>
+                                                    <output expression="nome" newline="False"/>
+                                                    <output expression="&quot; pegue o a&#231;a&#237; em nossa bancada assim que chamarmos o seu nome&quot;" newline="True"/>
+                                                    <output expression="&quot;O valor de sua compra foi R$: &quot;" newline="False"/>
+                                                    <assign variable="valor" expression="6.00 + 2.50 * 4"/>
+                                                    <output expression="valor" newline="True"/>
+                                                    <output expression="&quot;Agradecemos a prefer&#234;ncia!&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="tamanho=3">
+                                <then>
+                                    <output expression="&quot;A lista de complementos disponiveis em nossa A&#231;aiteria &#233; Leite em p&#243;, Leite condensado, Granola, Banana. Sendo cada complemento R$ 2,50&quot;" newline="True"/>
+                                    <output expression="&quot;Quantos complementos voc&#234; vai querer? 1, 2, 3 ou 4&quot;" newline="True"/>
+                                    <input variable="numcomplemento"/>
+                                    <if expression="numcomplemento = 1">
+                                        <then>
+                                            <output expression="&quot;Qual complemento vc deseja? 1 para leite em p&#243;, 2 para leite condensado, 3 para granola, 4 para banana:&quot;" newline="True"/>
+                                            <input variable="complementos"/>
+                                            <output expression="nome" newline="False"/>
+                                            <output expression="&quot; pegue o a&#231;a&#237; em nossa bancada assim que chamarmos o seu nome&quot;" newline="True"/>
+                                            <output expression="&quot;O valor de sua compra foi R$: &quot;" newline="False"/>
+                                            <assign variable="valor" expression="8.00 + 2.50"/>
+                                            <output expression="valor" newline="True"/>
+                                            <output expression="&quot;Agradecemos a prefer&#234;ncia!&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="numcomplemento=2">
+                                                <then>
+                                                    <output expression="&quot;Qual complemento vc deseja? 1 para leite em p&#243;, 2 para leite condensado, 3 para granola, 4 para banana:&quot;" newline="True"/>
+                                                    <output expression="&quot;Digite o n&#250;emero do primeiro complememto:&quot;" newline="True"/>
+                                                    <input variable="complementos"/>
+                                                    <output expression="&quot;Digite o n&#250;emero do segundo complememto:&quot;" newline="True"/>
+                                                    <input variable="complemento2"/>
+                                                    <output expression="nome" newline="False"/>
+                                                    <output expression="&quot; pegue o a&#231;a&#237; em nossa bancada assim que chamarmos o seu nome&quot;" newline="True"/>
+                                                    <output expression="&quot;O valor de sua compra foi R$: &quot;" newline="False"/>
+                                                    <assign variable="valor" expression="8.00 + 2.50 * 2"/>
+                                                    <output expression="valor" newline="True"/>
+                                                    <output expression="&quot;Agradecemos a prefer&#234;ncia!&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="numcomplemento=3">
+                                                        <then>
+                                                            <output expression="&quot;Qual complemento vc deseja? 1 para leite em p&#243;, 2 para leite condensado, 3 para granola, 4 para banana:&quot;" newline="True"/>
+                                                            <output expression="&quot;Digite o n&#250;emero do primeiro complememto:&quot;" newline="True"/>
+                                                            <input variable="complementos"/>
+                                                            <output expression="&quot;Digite o n&#250;emero do segundo complememto:&quot;" newline="True"/>
+                                                            <input variable="complemento2"/>
+                                                            <output expression="&quot;Digite o n&#250;emero do terceiro complememto:&quot;" newline="True"/>
+                                                            <input variable="complemento3"/>
+                                                            <output expression="nome" newline="False"/>
+                                                            <output expression="&quot; pegue o a&#231;a&#237; em nossa bancada assim que chamarmos o seu nome&quot;" newline="True"/>
+                                                            <output expression="&quot;O valor de sua compra foi R$: &quot;" newline="False"/>
+                                                            <assign variable="valor" expression="8.00 + 2.50 *3"/>
+                                                            <output expression="valor" newline="True"/>
+                                                            <output expression="&quot;Agradecemos a prefer&#234;ncia!&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;Voc&#234; ter&#225; todos os complementos dispon&#243;veis&quot;" newline="True"/>
+                                                            <input variable="complementos"/>
+                                                            <output expression="nome" newline="False"/>
+                                                            <output expression="&quot; pegue o a&#231;a&#237; em nossa bancada assim que chamarmos o seu nome&quot;" newline="True"/>
+                                                            <output expression="&quot;O valor de sua compra foi R$: &quot;" newline="False"/>
+                                                            <assign variable="valor" expression="8.00 + 2.50 * 4"/>
+                                                            <output expression="valor" newline="True"/>
+                                                            <output expression="&quot;Agradecemos a prefer&#234;ncia!&quot;" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;A lista de complementos disponiveis em nossa A&#231;aiteria &#233; Leite em p&#243;, Leite condensado, Granola, Banana. Sendo cada complemento R$ 2,50&quot;" newline="True"/>
+                                    <output expression="&quot;Quantos complementos voc&#234; vai querer? 1, 2, 3 ou 4&quot;" newline="True"/>
+                                    <input variable="numcomplemento"/>
+                                    <if expression="numcomplemento = 1">
+                                        <then>
+                                            <output expression="&quot;Qual complemento vc deseja? 1 para leite em p&#243;, 2 para leite condensado, 3 para granola, 4 para banana:&quot;" newline="True"/>
+                                            <input variable="complementos"/>
+                                            <output expression="nome" newline="False"/>
+                                            <output expression="&quot; pegue o a&#231;a&#237; em nossa bancada assim que chamarmos o seu nome&quot;" newline="True"/>
+                                            <output expression="&quot;O valor de sua compra foi R$: &quot;" newline="False"/>
+                                            <assign variable="valor" expression="10.00 + 2.50"/>
+                                            <output expression="valor" newline="True"/>
+                                            <output expression="&quot;Agradecemos a prefer&#234;ncia!&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="numcomplemento=2">
+                                                <then>
+                                                    <output expression="&quot;Qual complemento vc deseja? 1 para leite em p&#243;, 2 para leite condensado, 3 para granola, 4 para banana:&quot;" newline="True"/>
+                                                    <output expression="&quot;Digite o n&#250;emero do primeiro complememto:&quot;" newline="True"/>
+                                                    <input variable="complementos"/>
+                                                    <output expression="&quot;Digite o n&#250;emero do segundo complememto:&quot;" newline="True"/>
+                                                    <input variable="complemento2"/>
+                                                    <output expression="nome" newline="False"/>
+                                                    <output expression="&quot; pegue o a&#231;a&#237; em nossa bancada assim que chamarmos o seu nome&quot;" newline="True"/>
+                                                    <output expression="&quot;O valor de sua compra foi R$: &quot;" newline="False"/>
+                                                    <assign variable="valor" expression="10.00 + 2.50 * 2"/>
+                                                    <output expression="valor" newline="True"/>
+                                                    <output expression="&quot;Agradecemos a prefer&#234;ncia!&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="numcomplemento=3">
+                                                        <then>
+                                                            <output expression="&quot;Qual complemento vc deseja? 1 para leite em p&#243;, 2 para leite condensado, 3 para granola, 4 para banana:&quot;" newline="True"/>
+                                                            <output expression="&quot;Digite o n&#250;emero do primeiro complememto:&quot;" newline="True"/>
+                                                            <input variable="complementos"/>
+                                                            <output expression="&quot;Digite o n&#250;emero do segundo complememto:&quot;" newline="True"/>
+                                                            <input variable="complemento2"/>
+                                                            <output expression="&quot;Digite o n&#250;emero do terceiro complememto:&quot;" newline="True"/>
+                                                            <input variable="complemento3"/>
+                                                            <output expression="nome" newline="False"/>
+                                                            <output expression="&quot; pegue o a&#231;a&#237; em nossa bancada assim que chamarmos o seu nome&quot;" newline="True"/>
+                                                            <output expression="&quot;O valor de sua compra foi R$: &quot;" newline="False"/>
+                                                            <assign variable="valor" expression="10.00 + 2.50 *3"/>
+                                                            <output expression="valor" newline="True"/>
+                                                            <output expression="&quot;Agradecemos a prefer&#234;ncia!&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;Voc&#234; ter&#225; todos os complementos dispon&#243;veis&quot;" newline="True"/>
+                                                            <output expression="nome" newline="False"/>
+                                                            <output expression="&quot; pegue o a&#231;a&#237; em nossa bancada assim que chamarmos o seu nome&quot;" newline="True"/>
+                                                            <output expression="&quot;O valor de sua compra foi R$: &quot;" newline="False"/>
+                                                            <assign variable="valor" expression="10.00 + 2.50 * 4"/>
+                                                            <output expression="valor" newline="True"/>
+                                                            <output expression="&quot;Agradecemos a prefer&#234;ncia!&quot;" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
